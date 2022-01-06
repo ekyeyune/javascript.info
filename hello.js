@@ -1,0 +1,1 @@
+alert("I am new to JavaScript. Please show me around");
