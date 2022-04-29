@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            document.addEventListener('DOMContentLoaded', ready);
+
+            function ready(){
+                alert(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
+            }
+            document.addEventListener("DOMContentLoaded", ready);
+        </script>
+        <img id="img" src="https://en.js.cx/clipart/train.gif?speed=1&cache=0">
+        <script>
+            log('Initial readyState:' + document.readyState);
+            document.addEventListener('readyStatechange', () => log('readyState:' +document.readyState));
+            document.addEventListener('DOMContentLoaded', () => log('DOMContentLoaded'));
+            window.onload = () => log('window onload');
+        </script>
+
+        <iframe src="iframe.html" onload="log('iframe onload')"></iframe>
+        <img src="http://en.js.cx/clipart/train.gif" id="img">
+        <script>
+            img.onload = () => log('img onload');
+        </script>
+</html>

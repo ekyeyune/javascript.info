@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            const x = 1;
+            function evalAndReturnX(code){
+                eval(code);
+                return x;
+            }
+            console.log(evalAndReturnX("var x = 2"));
+            console.log(x);
+
+            let plusOne = Function("n", "return n+1");
+            console.log(plusOne(4));
+
+            const ordinal = require("ordinal");
+            const {days, months} = require("date-names");
+            exports.formatDate = function(date, format){
+                return fromat.replace(/YYYY|M(MMM)?Do?|dddd/g, tag => {
+                    if(tag =="YYYY") return date.getFullYear();
+                })
+            }
+        </script>
+        <script>
+            const {find_path} = require("dijkstrajs");
+            let graph = {};
+            for(let node of Object.keys(roadGraph)){
+                let edges = graph[node] = {};
+                for(let dest of roadGraph[node]){
+                    edges[dest] = 1;
+                }
+            }
+            console.log(find_path(graph, "Post Office", "Cabin"));
+        </script>
+    </body>
+</html>

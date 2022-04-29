@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div onclick="alert('The handler!')">
+            <em>If you click on <code>EM</code>, THE HANDLER ON <code>div</code> runs.</em>
+        </div>
+        <style>
+            body*{
+                margin: 10px;
+                border: 1px solid blue;
+            }
+        </style>
+        <form onclick="alert('form')">FORM
+            <div onclick="alert('div')">DIV
+                <P onclick="alert('p')">P</P>
+            </div>
+        </form>
+
+    </body>
+</html>

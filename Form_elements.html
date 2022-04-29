@@ -1,0 +1,35 @@
+<form id="form">
+    <input name="login">
+</form>
+<script>
+    alert(form.elements.login == form.login);
+    form.login.name = "username";
+
+    alert(form.elements.login);
+    alert(form.login);
+
+    alert(form.username == form.login);
+
+    
+</script>
+<select id="select">
+   <option value="apple">Apple</option>
+   <option value="pear">Pear</option>
+   <option value="banana">Banana</option>
+</select>
+<script>
+    select.options[2].selected = true;
+    select.selectedIndex = 2;
+    select.value = 'banana';
+</script>
+<!-- multiple selected elements -->
+
+<select id="select1">
+    <option value="blues" selected>Blues</option>
+    <option value="rock" selected>Rock</option>
+    <option value="classic">Classic</option>
+</select>
+<script>
+    let selected = Array.from(select1.options).filter(option => option.selected).map(option => option.value);
+    alert(selected);
+</script>

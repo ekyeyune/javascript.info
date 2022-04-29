@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>Searching</head>
+    <body>
+        <ul>
+            <li>Kyeyune</li>
+            <li>Eric</li>
+            <li>Brian</li>
+        </ul>
+        <ul>
+            <li>Kyocera</li>
+            <li>Canon</li>
+            <li>Xerox</li>
+        </ul>
+        <script>
+            let elements = document.querySelectorAll('ul>li:last-child');
+            for(let elem of elements){
+                alert(elem.innerHTML);
+            }
+        </script>
+        <h1>Contents</h1>
+        <div class="contents">
+            <ul>
+                <li class="chapter">Chapter 1</li>
+                <li class="chapter">Chapter 2</li>
+            </ul>
+        </div>
+        <form name=""my-form>
+            <div class="article">Article</div>
+            <div class="long article">Long Arcticle</div>
+        </form>
+        <script>
+            let chapter = document.querySelector('.chapter');
+            alert(chapter.closest('.book'));
+            alert(chapter.closest('.contents'));
+
+            let form = document.getElementsByName('my-form')[0];
+            let articles = form.getElementsByClassName('articles');
+            alert(articles.length);
+        </script>
+    </body>
+</html>
